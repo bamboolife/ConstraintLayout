@@ -48,6 +48,12 @@ ConstraintLayout是一个ViewGroup（ 翻译为 约束布局），也有人把�
 | layout_alignBottom | 本控件的下边缘和某控件的下控件对齐 | @id/id-name |
 | layout_alignRight  | 本控件的右边缘和某控件的有边缘对齐 | @id/id-name |
 
+| RelativeLayout属性 | 说明 | 属性值类型 |
+|:-------------- |:------ |:-------- |
+| layout_marginBottom | 离某控件底边缘的距离 |  具体的值dp，px |
+| layout_marginLeft  | 离某控件左边缘的距离 | 具体的值dp，px |
+| layout_marginRight | 离某控件右边缘的距离 | 具体的值dp，px |
+| layout_marginTop | 离某控件上边缘的距离 | 具体的值dp，px |
 
 
 | ConstraintLayout |
