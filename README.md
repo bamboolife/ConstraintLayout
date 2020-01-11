@@ -25,6 +25,7 @@ ConstraintLayout是一个ViewGroup（ 翻译为 约束布局），也有人把�
 
 #### 3.2相对定位
 相对定位可以说和RelativeLayout差不多，使用起来大家掌握的快，但是比RelativeLayout强大了很多
+
 | RelativeLayout属性 | 说明 | 属性值类型 |
 |:--------------:|:------|:--------:|
 | layout_centerHrizontal | 水平居中 |   true\false     |
