@@ -27,7 +27,7 @@ ConstraintLayout是一个ViewGroup（ 翻译为 约束布局），也有人把�
 相对定位可以说和RelativeLayout差不多，使用起来大家掌握的快，但是比RelativeLayout强大了很多
 
 | RelativeLayout属性 | 说明 | 属性值类型 |
-|:--------------:|:------|:--------:|
+|:-------------- |:------ |:-------- |
 | layout_centerHrizontal | 水平居中 |   true\false     |
 | layout_centerVertical  | 垂直居中 |  true\false     |
 | layout_centerInparent  | 相对于父控件完全居中 |  true\false     |
@@ -38,7 +38,7 @@ ConstraintLayout是一个ViewGroup（ 翻译为 约束布局），也有人把�
 | layout_alignWithParentIfMissing | 如果对应的兄弟控件找不到的话，就以父控件作为参照物 |  true\false     |
 
 | RelativeLayout属性 | 说明 | 属性值类型 |
-|:--------------:|:------|:--------:|
+|:-------------- |:------ |:-------- |
 | layout_below  | 在某控件下方 | @id/id-name |
 | layout_above  | 在某控件上方 | @id/id-name |
 | layout_toLeftOf | 在某控件的左边 | @id/id-name |
@@ -51,7 +51,7 @@ ConstraintLayout是一个ViewGroup（ 翻译为 约束布局），也有人把�
 
 
 | ConstraintLayout |
-|:--------------:|
+|:-------------- |
 | layout_constraintLeft_toLeftOf |
 | layout_constraintLeft_toRightOf |
 | layout_constraintRight_toLeftOf |
