@@ -18,7 +18,8 @@ class HomeViewModel : ViewModel() {
            MotionBean(R.mipmap.ic_pager, "Motion applies with ViewPager", LottieMotionActivity::class.java),
            MotionBean(R.mipmap.ic_pager, "ARC Menu", ArcMenuActivity::class.java),
            MotionBean(R.mipmap.ic_pager, "Windmill", WindmillActivity::class.java),
-           MotionBean(R.mipmap.ic_pager, "Motion 使用测试", MotionNestActivity::class.java)
+           MotionBean(R.mipmap.ic_pager, "Motion 使用测试", MotionNestActivity::class.java),
+           MotionBean(R.mipmap.ic_pager, "ConstraintSet 使用测试", KeyFrameActivity::class.java)
 
         )
     }
