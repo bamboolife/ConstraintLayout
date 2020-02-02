@@ -87,3 +87,84 @@ MotionLayout本质上就是基于以上想法的，在将来这些概念将会�
 | app:progress=”float”  | 指定转换的完成度 范围是0 - 1 |
 | app:currentState=”reference”  | 强制指定特定的ConstraintSet |
 
+###  关键帧（Key Frames）
+如果要改变路径的形状，则必须提供一些介于起点和终点之间关键。
+
+```xml
+<KeyFrameSet >
+
+            ...
+
+</KeyFrameSet >
+```
+### KeyPosition
+
+KeyPosition 可以帮助视图改变运动路径的形状。创建它们时，请确保提供目标视图的ID，沿时间轴的位置，可以是0到100之间的任意数字，以及指定X或Y坐标已经运行到的百分比。可以设置type参数指出坐标是相对于实际的X或Y轴，还是相对于路径本身。
+
+```xml
+<KeyFrameSet >
+
+    <KeyPosition
+
+    app:target="@+id/button"
+
+    app:framePosition="30"
+
+    app:type="deltaRelative"
+
+    app:percentX="0.85"/>
+
+    <KeyPosition
+
+    app:target="@+id/button"
+
+    app:framePosition="60"
+
+    app:type="deltaRelative"
+
+    app:percentX="1"/>
+
+</KeyFrameSet>
+```
+上面第一个KeyPosition代表button按钮在运行道30%的时候，相对于运行轨迹x已经运行了85%了。第二个KeyPosition代表button按钮在运行道60%的时候，相对于运行轨迹x已经运行了100%了
+
+### KeyCycle
+
+KeyCycle用来给动画添加振动。可以通过提供诸如要使用的波形和波形周期等详细信息来配置KeyCycle。下面是KeyCycle支持的各种振动波形：
+![image]()
+
+在上述动画中加入如下KeyCycle
+
+```xml
+<KeyCycle
+
+    app:target="@+id/button"
+
+    app:framePosition="30"
+
+    android:rotation="50"
+
+    app:waveShape="sin"
+
+    app:wavePeriod="1"/>
+```
+### 交互式动画
+
+上面的动画运行我都是通过对Button按钮设置点击监听事件，然后调用motion_container.transitionToEnd();方法来使他运行的。其实完全不必这么麻烦，因为MotionLayout的视图允许开发者将触摸事件直接附加到视图中。截止到现在，它支持点击和滑动事件。要实现上面实现的点击事件可以在MotionScene中增加代码如下：
+
+```xml
+<OnClick
+
+    app:target="@+id/button"
+
+    app:mode="transitionToEnd"/>
+```
+而可以通过给MotionScene增加OnSwipe标签来使视图通过在屏幕滑动而大运行。在创建该标签时，必须确保提供正确的拖动方向以及应作为拖动控制柄的视图的边。可以这么理解，相对于初始位置，如果想往上滑起到增加动画进度就设置为dragUp，想往下滑起到增加动画进度就设置为dragDown，左右同样道理。至于touchAnchorSide这个参数的本意应该设置拉目标视图的边，但我发现就算不设置touchAnchorSide这个参数或者设置成任意值top bottom或者left right，对动画都没有影响。这可能是MotionLayout的一个bug毕竟现在还只是alpha版。
+
+```xml
+<OnSwipe
+
+    app:touchAnchorId="@+id/actor"
+
+    app:dragDirection="dragUp"/>
+```
