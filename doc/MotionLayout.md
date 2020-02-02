@@ -15,7 +15,7 @@ MotionLayout另一个不同点就是完全是声明式的，你完全可以用xm
 
 我们相信 使用这种声明式的说明 将会简化动画的创建，同时也为在Android studio中提供了一个可视化的工具。但是这个工具目前还不是特别稳定，估计会在稳定版或者beta版中与大家见面。
 
-[!image]()
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motion_tool.gif)
 
 最后，MotionLayout作为ConstraintLayout 2.0的一部分，将会以support library的形式与大家见面。API支持最低为14，这就意味着至少支持99.8%的Android设备。
 
@@ -53,7 +53,7 @@ dependencies {
 <androidx.constraintlayout.motion.widget.MotionLayout .../>
 ```
 
-[!image]()
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motion_scene.gif)
 
 ConstraintLayout 与MotionLayout 最大的区别在于XML层级上面，实际上MotionLayout 并没有包含在布局文件中。
 当然啦，MotionLayout非常有特色的将所有的信息保存在了一个独立的XML文件中，保存在XML文件中的信息优先级将会比layout文件中要高。
@@ -69,7 +69,8 @@ MotionLayout本质上就是基于以上想法的，在将来这些概念将会�
 
 就像已经讲过的，与layouts布局相反，MotionLayout保存的规则就是存放到独立的XML文件中，MotionScene，存放在你的res/xml目录中。
 
-[!image]()
+
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motionScene.gif)
 
 一个MotionScene可以包含指定动画的所需要的一切。
 
