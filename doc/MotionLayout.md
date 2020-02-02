@@ -77,3 +77,13 @@ MotionLayout本质上就是基于以上想法的，在将来这些概念将会�
 - 1.ConstraintSets
 - 2.各种ConstraintSets 之间的变换
 - 3.关键帧，触摸处理等等
+
+### MotionLayout常用属性
+| 属性 | 说明 |
+|:----- |:------ |
+| app:layoutDescription=”reference” | 指定你需要绑定的MotionScene XML 文件 |
+| app:applyMotionScene=”boolean”  | 是否启用MotionScene，默认是true |
+| app:showPaths=”boolean” | debug模式比较有用的模式，可以显示动画运动的路径 |
+| app:progress=”float”  | 指定转换的完成度 范围是0 - 1 |
+| app:currentState=”reference”  | 强制指定特定的ConstraintSet |
+
