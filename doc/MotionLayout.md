@@ -53,7 +53,7 @@ dependencies {
 <androidx.constraintlayout.motion.widget.MotionLayout .../>
 ```
 
-![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motion_scene.gif)
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motion_scene.png)
 
 ConstraintLayout 与MotionLayout 最大的区别在于XML层级上面，实际上MotionLayout 并没有包含在布局文件中。
 当然啦，MotionLayout非常有特色的将所有的信息保存在了一个独立的XML文件中，保存在XML文件中的信息优先级将会比layout文件中要高。
@@ -70,7 +70,7 @@ MotionLayout本质上就是基于以上想法的，在将来这些概念将会�
 就像已经讲过的，与layouts布局相反，MotionLayout保存的规则就是存放到独立的XML文件中，MotionScene，存放在你的res/xml目录中。
 
 
-![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motionScene.gif)
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motionScene.png)
 
 一个MotionScene可以包含指定动画的所需要的一切。
 
