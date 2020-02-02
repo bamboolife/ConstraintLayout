@@ -7,49 +7,53 @@
     android:fitsSystemWindows="false"
     android:background="@android:color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:theme="@style/AppTheme.AppBarOverlay">
+
         <com.sundy.constraintlayout.widget.MotionToolBar
             android:id="@+id/motionLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:motionDebug="NO_DEBUG"
-            app:layoutDescription="@xml/motion_in_app_bar"
             android:minHeight="52dp"
-            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+            app:layoutDescription="@xml/motion_in_app_bar"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            app:motionDebug="NO_DEBUG">
+
             <ImageView
                 android:id="@+id/background"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:background="@android:color/black"
-                android:src="@drawable/tree_scene"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/tree_scene" />
+
             <ImageView
                 android:id="@+id/sun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_sun"/>
+                android:src="@drawable/ic_sun" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/logo"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:clickable="false"
-                android:src="@drawable/moosphon_logo"/>
+                android:src="@drawable/moosphon_logo" />
 
             <TextView
                 android:id="@+id/tipText"
-                android:text="Time flies fast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif-monospace"
-                android:textSize="18sp"
+                android:text="Time flies fast"
                 android:textColor="@color/title_color"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
         </com.sundy.constraintlayout.widget.MotionToolBar>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
