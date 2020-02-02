@@ -52,8 +52,11 @@ dependencies {
 ```xml
 <androidx.constraintlayout.motion.widget.MotionLayout .../>
 ```
+MotionLayout 的构成
 
 ![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/motion_scene.png)
+
+由上图可知，MotionLayout 可分为 <View> 和 <Helper> 两个部分。<View> 部分可简单理解为一个 ConstraintLayout，至于 <Helper> 其实就是我们的“动画层”了。MotionLayout 为我们提供了 layoutDescription 属性，我们需要为它传入一个 MotionScene 包裹的 XML 文件，想要实现动画交互，就必须通过这个“媒介”来连接。
 
 ConstraintLayout 与MotionLayout 最大的区别在于XML层级上面，实际上MotionLayout 并没有包含在布局文件中。
 当然啦，MotionLayout非常有特色的将所有的信息保存在了一个独立的XML文件中，保存在XML文件中的信息优先级将会比layout文件中要高。
@@ -65,7 +68,7 @@ ConstraintSet是跟随ConstraintLayout 一起的，它封装了layout中的布�
 相比于TransitionManager，在ConstraintLayout 中 ConstraintSet提供了一个相对容易的方式来创建动画。
 MotionLayout本质上就是基于以上想法的，在将来这些概念将会被扩展。
 
-### MotionScene
+### MotionScene:传说中的“百宝袋”
 
 就像已经讲过的，与layouts布局相反，MotionLayout保存的规则就是存放到独立的XML文件中，MotionScene，存放在你的res/xml目录中。
 
