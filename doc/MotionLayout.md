@@ -131,7 +131,7 @@ KeyPosition 可以帮助视图改变运动路径的形状。创建它们时，�
 ### KeyCycle
 
 KeyCycle用来给动画添加振动。可以通过提供诸如要使用的波形和波形周期等详细信息来配置KeyCycle。下面是KeyCycle支持的各种振动波形：
-![image]()
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/KeyCycle.png)
 
 在上述动画中加入如下KeyCycle
 
@@ -168,3 +168,11 @@ KeyCycle用来给动画添加振动。可以通过提供诸如要使用的波形
 
     app:dragDirection="dragUp"/>
 ```
+### OnSwipe handler
+![image](https://github.com/bamboolife/ConstraintLayout/blob/master/imgs/OnSwipe.png)
+
+| 属性 | 说明 |
+|:----- |:----- |
+| touchAnchorId | 需要跟踪的对象(这里，我们使用@+id/button) |
+| touchAnchorSide | 应该跟踪你手指的物体的侧面（right/left/top/bottom） |
+| dragDirection | 我们拖动物体的方向(dragRight/dragLeft/dragUp/dragDown) 将会定义滑动的完成度(0-1) |
