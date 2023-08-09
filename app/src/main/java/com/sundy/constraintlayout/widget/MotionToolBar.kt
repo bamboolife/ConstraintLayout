@@ -22,7 +22,7 @@ class MotionToolBar @JvmOverloads constructor(
     override fun onOffsetChanged(appBarLayout: AppBarLayout, verticalOffset: Int) {
 
         //progress = -verticalOffset / appBarLayout?.totalScrollRange?.toFloat()!!
-        val seekPosition = -verticalOffset / (appBarLayout?.totalScrollRange!!.toFloat()/5*3)
+        val seekPosition = -verticalOffset / (appBarLayout.totalScrollRange.toFloat()/5*3)
         progress = 1 - seekPosition
     }
 
